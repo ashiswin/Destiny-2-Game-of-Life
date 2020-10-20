@@ -38,4 +38,10 @@ class GameOfLife:
         return neighbours
     
     def saveBoard(self, filename: str):
-        io.imsave(filename, self.board.transpose().astype(np.uint8) * 255)
+        rows, cols = self.board.shape
+        outputBoard = np.ndarray((rows * 3, cols * 3), dtype=int)
+        for i in range(outputBoard.shape[0]):
+            for j in range(outputBoard.shape[1]):
+                outputBoard[i, j] = self.board[i //3, j // 3]
+
+        io.imsave(filename, outputBoard.transpose().astype(np.uint8) * 255)
