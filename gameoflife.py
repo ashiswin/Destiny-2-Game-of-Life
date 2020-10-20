@@ -1,7 +1,7 @@
 import numpy as np
 from skimage import io
 
-DIRECTIONS = [(0, 1), (1, 0), (-1, 0), (0, -1)]
+DIRECTIONS = [(0, 1), (1, 0), (-1, 0), (0, -1), (1, 1), (1, -1), (-1, 1), (-1, -1)]
 
 class GameOfLife:
 
