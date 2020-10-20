@@ -9,7 +9,7 @@ class GameOfLife:
         self.board = board
     
     def getNextBoard(self):
-        newBoard = np.ndarray(self.board.shape, dtype=int)
+        newBoard = np.zeros(self.board.shape, dtype=int)
 
         for i in range(self.board.shape[0]):
             for j in range(self.board.shape[1]):

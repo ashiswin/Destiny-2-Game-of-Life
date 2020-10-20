@@ -19,6 +19,6 @@ for i in range(0, im.size[0], 3):
 im.close()
 
 board = GameOfLife(np.asarray(state, dtype=int))
-for i in range(8):
-    board.saveBoard(f"{i}.tiff")
+for i in range(7778):
+    board.saveBoard(f"boards/{i}.tiff")
     board = board.getNextBoard()
